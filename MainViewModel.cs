@@ -49,7 +49,7 @@ namespace TimeLine
         {
             var dataObject = (DateTime) item;
 
-            if (dataObject.Year > 2018)
+            if (dataObject.Year == 2018)
             {
                 return LeftCardTemplate;
 

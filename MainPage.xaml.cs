@@ -16,7 +16,7 @@ namespace TimeLine
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
             var item = TimeLv.Items.Where(date => (DateTime) date == new DateTime(2018, 11, 22)).ToList();
-            TimeLv.ScrollIntoView((DateTime)item.FirstOrDefault());
+            TimeLv.ScrollIntoView(item.FirstOrDefault());
             TimeLv.SelectedItem = item;
         }
     }    

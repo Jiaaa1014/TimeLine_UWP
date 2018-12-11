@@ -21,10 +21,10 @@
                             Height="200"
                             BorderBrush="WhiteSmoke"
                             BorderThickness="1">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Text="Is 2018" />
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <TextBlock Text="Is 2018" />
+                                <TextBlock Text="{Binding}" />
+                            </StackPanel>
                         </Border>
                         <Polygon
                             x:Name="LeftArrow"
@@ -68,10 +68,10 @@
                             BorderBrush="WhiteSmoke"
                             BorderThickness="1"
                             RelativePanel.RightOf="RightArrow">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Text="Isn't 2018" />
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <TextBlock Text="Isn't 2018" />
+                                <TextBlock Text="{Binding}" />
+                            </StackPanel>
                         </Border>
                     </RelativePanel>
                 </DataTemplate>
@@ -93,69 +93,12 @@
                     BorderBrush="Black"
                     BorderThickness="1,0,0,0" />
 
-                <!--  LeftCard  -->
-                <!--<RelativePanel
-                Margin="0,0,222,300"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
-                <Border
-                    x:Name="LeftCard"
-                    Width="200"
-                    Height="200"
-                    BorderBrush="WhiteSmoke"
-                    BorderThickness="1">
-                    <TextBlock Text="First card" />
-                </Border>
-                <Polygon
-                    x:Name="LeftArrow"
-                    Fill="WhiteSmoke"
-                    Points="0,40,0,10,20,20"
-                    RelativePanel.AlignTopWithPanel="True"
-                    RelativePanel.RightOf="LeftCard" />
-                <Ellipse
-                    Width="25"
-                    Height="25"
-                    Margin="0,10,0,0"
-                    Fill="DarkSeaGreen"
-                    RelativePanel.RightOf="LeftArrow"
-                    Stroke="DarkSeaGreen" />
-            </RelativePanel>-->
-
-                <!--  RightCard  -->
-                <!--<RelativePanel
-                Margin="222,0,0,-300"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
-                <Ellipse
-                    x:Name="RightPoint"
-                    Width="25"
-                    Height="25"
-                    Margin="0,10,0,0"
-                    Fill="IndianRed"
-                    Stroke="IndianRed" />
-                <Polygon
-                    x:Name="RightArrow"
-                    Fill="WhiteSmoke"
-                    Points="20,40,20,10,0,20"
-                    RelativePanel.AlignTopWithPanel="True"
-                    RelativePanel.RightOf="RightPoint" />
-                <Border
-                    x:Name="Card"
-                    Width="200"
-                    Height="200"
-                    BorderBrush="WhiteSmoke"
-                    BorderThickness="1"
-                    RelativePanel.RightOf="RightArrow">
-                    <TextBlock Text="First card" />
-                </Border>
-            </RelativePanel>-->
-
                 <ListView
                     x:Name="TimeLv"
                     ItemTemplateSelector="{StaticResource LeftOrRightCardSelector}"
                     ItemsSource="{x:Bind ViewModel.DatesSource}" />
             </Grid>
         </ScrollViewer>
-        <Button Click="ButtonBase_OnClick" Content="到2018/8/9" />
+        <Button Click="ButtonBase_OnClick" Content="到2018/11/22" />
     </StackPanel>
 </Page>
